@@ -1,0 +1,12 @@
+<view class="container">
+    <calendar 
+        id="calendar"
+        _date="2022-08-05"
+        _markers="{{ markers }}"
+        toMonth="{{toMonth}}"
+        toDate="{{toMonth}}"
+        bindload="handleCalendarLoad"
+        binddatechange="handleCalendarDateChange"
+        bindviewchange="handleCalendarPanelViewChange">
+    </calendar>
+</view>
