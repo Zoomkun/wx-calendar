@@ -1,0 +1,238 @@
+/* component/calendar/calendar.wxss */
+
+.icon {
+  background: url("https://web-static-cdn.oss-cn-beijing.aliyuncs.com/centralPlatform/wearable-device-wx/calendarPackUp.png") no-repeat center;
+  background-size: 100% auto;
+  width: 32rpx;
+  height: 32rpx;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.swiper {
+  transition: height 0.3s;
+}
+
+.header-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.today {
+  height: 65rpx;
+  background: #fff;
+  border-radius: 22rpx;
+  font-size: 24rpx;
+  line-height: 64rpx;
+  color: #ABAEB2;
+  text-align: center;
+  margin-right: 32rpx;
+}
+
+.today:active {
+  background: #dfdfdf;
+  color: #5f6464;
+}
+
+.direction-column {
+  flex-direction: column;
+}
+
+.flex1 {
+  flex: 1;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-start {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.flex-end {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.flex-around {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.align-start {
+  align-items: flex-start;
+}
+
+.align-end {
+  align-items: flex-end;
+}
+
+.align-stretch {
+  align-items: stretch;
+}
+
+.calendar {
+  font-family: "PingFang SC", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", "Source Han Sans", "Noto Sans CJK Sc", "Microsoft YaHei", "Microsoft Jhenghei", sans-serif;
+}
+
+.calendar .title {
+  padding: 10rpx 16rpx 10rpx 20rpx;
+  line-height: 64rpx;
+  font-size: 32rpx;
+  font-weight: 600;
+  color: #1C2525;
+  line-height: 44px;
+  letter-spacing:1px;
+}
+
+.calendar .title .year-month {
+  margin-right: 20rpx;
+}
+
+.calendar .title .icon {
+  padding: 0 16rpx;
+  font-size: 32rpx;
+  color: #999;
+}
+
+.calendar .title .open {
+  background-color: #f6f6f6;
+  color: #999;
+  font-size: 22rpx;
+  line-height: 36rpx;
+  border-radius: 18rpx;
+  padding: 0 14rpx;
+}
+
+.list-open {
+  position: relative;
+  justify-content: center;
+}
+
+.list-open .icon::after {
+  content: '';
+  position: absolute;
+  top: 16rpx;
+  right: 60rpx;
+  display: block;
+  width: 278rpx;
+  height: 0rpx;
+  border-bottom: 2rpx solid rgba(214, 219, 219, 0.68);
+}
+
+.list-open .icon::before {
+  content: '';
+  position: absolute;
+  top: 16rpx;
+  left: 60rpx;
+  display: block;
+  width: 278rpx;
+  height: 0rpx;
+  border-bottom: 2rpx solid rgba(214, 219, 219, 0.68);
+}
+
+.fold {
+  transform: rotate(0deg);
+}
+
+.unfold {
+  transform: rotate(180deg);
+}
+
+.calendar .calendar-week {
+  display: flex;
+  line-height: 40rpx;
+  padding: 0 25rpx;
+  font-size: 28rpx;
+  color: #757980;
+}
+
+.calendar .calendar-week .view {
+  flex: 1;
+  text-align: center;
+}
+
+.calendar .calendar-main {
+  padding: 18rpx 25rpx 0rpx;
+  transition: height 0.3s;
+  align-content: flex-start;
+  overflow: hidden;
+}
+
+.calendar .calendar-main .day {
+  position: relative;
+  width: calc(100%/7);
+  color: #666;
+  text-align: center;
+  height: 64rpx;
+}
+
+.calendar .calendar-main .day .bg {
+  height: 64rpx;
+  line-height: 64rpx;
+  font-size: 28rpx;
+  color: #333;
+}
+
+.calendar .calendar-main .day .select {
+  width: 64rpx;
+  border-radius: 50%;
+  text-align: center;
+  color: #fff;
+  background: #1F6AFF;
+  margin: 0 auto;
+}
+
+.calendar .calendar-main .day .spot::after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 8rpx;
+  height: 8rpx;
+  bottom: 8rpx;
+  background: #478BFF;
+  border-radius: 50%;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.calendar .calendar-main .day .deep-spot::after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 8rpx;
+  height: 8rpx;
+  bottom: 8rpx;
+  background: #F76965;
+  border-radius: 50%;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.calendar .calendar-main .day .other-month {
+  color: #ccc;
+}
+
+.header-wrap .month {
+  font-size: 36rpx;
+  color: #242629;
+  line-height: 64rpx;
+}

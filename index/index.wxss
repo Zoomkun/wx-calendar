@@ -1,0 +1,8 @@
+.intro {
+  margin: 30px;
+  text-align: center;
+}
+
+.calendar-main{
+    padding: 0 32rpx;
+}

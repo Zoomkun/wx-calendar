@@ -1,0 +1,3 @@
+<view class="calendar-main">
+    <calendar spotMap="{{spotMap}}" bindgetDateList="getDateList" bindmonthChange="monthChange" bindselectDay="selectDay"></calendar>
+</view>
