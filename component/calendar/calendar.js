@@ -1,4 +1,6 @@
 // component/calendar/calendar.js
+console.log(require("miniprogram-computed"))
+const computedBehavior = require("miniprogram-computed").behavior;
 Component({
     /**
      * 组件的属性列表
@@ -29,6 +31,23 @@ Component({
             value: true,
         },
     },
+    behaviors: [computedBehavior],
+    computed: {
+        processSpotMap(data) {
+            const spotMap = data.spotMap
+            let processSpotMap = {}
+            if(spotMap.length > 0) {
+                for (const iterator of spotMap) {
+                    if(iterator.status === 1) {
+                        processSpotMap[iterator.date.replace(/\b(0+)/gi, '')] = 'deep-spot'
+                    } else {
+                        processSpotMap[iterator.date.replace(/\b(0+)/gi, '')] = 'spot'
+                    }
+                }
+            }
+            return processSpotMap
+        },
+      },
  /**
      * 组件的属性列表
      */

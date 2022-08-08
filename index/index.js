@@ -57,6 +57,60 @@ Page({
 
     },
     monthChange({detail}) {
+       
+        const spotMap = [
+            {
+                "date": "2022-09-01",
+                "status": 1
+            },
+            {
+                "date": "2022-09-02",
+                "status": 1
+            },
+            {
+                "date": "2022-09-03",
+                "status": 1
+            },
+            {
+                "date": "2022-09-04",
+                "status": 1
+            },
+            {
+                "date": "2022-09-05",
+                "status": 1
+            },
+            {
+                "date": "2022-09-06",
+                "status": 1
+            },
+            {
+                "date": "2022-09-07",
+                "status": 0
+            },
+            {
+                "date": "2022-09-09",
+                "status": 1
+            },
+            {
+                "date": "2022-09-10",
+                "status": 1
+            },
+            {
+                "date": "2022-09-11",
+                "status": 0
+            },
+            {
+                "date": "2022-09-12",
+                "status": 0
+            },
+            {
+                "date": "2022-09-13",
+                "status": 0
+            }
+        ]
+        this.setData({
+            spotMap
+        })
         console.log(detail,'monthChange detail');
     },
     getDateList({detail}) {
